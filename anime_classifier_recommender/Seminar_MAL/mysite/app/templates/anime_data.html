@@ -1,0 +1,13 @@
+{% if anime_data %}
+    <ul>
+        {% for anime in anime_data %}
+            <li>
+                <strong>Title:</strong> {{ anime.title }}<br>
+                <strong>Rating:</strong> {{ anime.mean }}<br>
+                <strong>Studios:</strong> {{ anime.studios }}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No anime data available.</p>
+{% endif %}
